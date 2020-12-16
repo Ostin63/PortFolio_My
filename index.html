@@ -4,34 +4,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="img/icon.svg">
-  <title>Document</title>
+  <title>Portfolio</title>
+  <link rel="shortcut icon" href="img/HomeStudio.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
   <header>
-    <div>
-      <div class="logo">Dmitry</div>
-      <ul>
-        <li><a href="">Hello</a></li>
-        <li><a href="">Навыки</a></li>
-        <li><a href="">Образование</a></li>
-        <li><a href="">Портфолио</a></li>
-        <li><a href="">Контоакты</a></li>
-      </ul>
+    <div class="container">
+      <div class="header">
+        <div class="logo">
+          <img src="img/HomeStudio-320.png" alt="logo">
+        </div>
+        <ul class="nav-site">
+          <li><a href="#1">Hello</a></li>
+          <li><a href="#2">Навыки</a></li>
+          <li><a href="#3">Образование</a></li>
+          <li><a href="#4">Портфолио</a></li>
+          <li><a href="#5">Контакты</a></li>
+        </ul>
+      </div>
     </div>
   </header>
   <main>
-    <section class="container">
-      <div>
-        <div class="hello">
-          <h1>Я Дмитрий Хлобощин.</h1>
-          <p>Фронтенд-разработчик из Волгограда, Россия. В настоящее время работаю во фрилансе. Впоиске постоянной работы</p>
+    <section class="container" id="1">
+      <div class="hello">
+        <div class="hello-text">
+          <h1>Привет! Я Дмитрий Хлобощин.</h1>
+          <p>Фронтенд-разработчик из Волгограда, Россия. В настоящее время работаю во фрилансе. В поиске постоянной
+            работы.</p>
+          <div class="logo">
+            <img src="img/HomeStudio-320.png" alt="logo">
+          </div>
         </div>
-        <img src="img/My.jpg" alt="My">
+        <div class="hello-img">
+          <img src="img/My.jpg" alt="My">
+        </div>
       </div>
     </section>
-    <section class="container">
+    <section class="container" id="2">
       <div class="skills">
         <div>
           <h2>Навыки и умения.</h2>
@@ -39,112 +53,163 @@
             получение опыта, даже негативного.</p>
         </div>
         <div>
-          <h4>Веб-разработка</h4>
-          <p></p>
-        </div>
-        <div>
           <h4>Фронтенд-разработка</h4>
-          <p>HTML, CSS, LESS, Gulp, Javascript, PHP, JQuery, Bootstrap4, Git, Owl-carousel</p>
+          <p>HTML, CSS, LESS, Gulp, Javascript, PHP, JQuery, Bootstrap4, Git, Owl-carousel, Figma, Adobe Photoshop.</p>
         </div>
       </div>
     </section>
-    <section>
+    <section class="container" id="3">
       <div class="education">
         <h2>Образование</h2>
-        <div>
-          <p>1984 г. ВАТУ ГА</p>
+        <div class="block-vatuga">
+          <h3>1984 г. ВАТУ ГА</h3>
           <i>Выборгское Авиционно-техническое Училище Гражданссой Авиации</i>
         </div>
-        <div>
-          <p>2018 г. HTML Academy</p>
-          <p>HTML & CSS верстка сайтов</p>
-          <img src="img/html&css.jpg" alt="">
-        </div>
-        <div>
-          <p>сентябрь2018 г. HTML Academy</p>
-          <p>PHP</p>
-          <img src="img/php.jpg" alt="">
+        <div class="block-academy">
+          <div class="block block-HTML">
+            <h3>2018 г. HTML Academy</h3>
+            <p>HTML & CSS верстка сайтов</p>
+            <div class="academy-img">
+              <img src="img/html&css.jpg" alt="html&css">
+            </div>
+          </div>
+          <div class="block block-php">
+            <h3>сентябрь2018 г. HTML Academy</h3>
+            <p>PHP</p>
+            <div class="academy-img">
+              <img src="img/php.jpg" alt="php">
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <section class="container">
+    <section class="container" id="4">
       <div class="portfolio">
         <h2>Портфолио</h2>
         <ul class="website">
-          <li>
-            <a href="https://ostin63.github.io/i_am_woman/build/index.html">
-              <img src="img/i-im-woman.jpg" alt="i im woman">
-            </a>
+          <li class="website-item">
+            <h3>I im woman</h3>
+            <p>Торговый сайт</p>
+            <div class="img">
+              <a href="https://ostin63.github.io/i_am_woman/build/index.html">
+                <img src="img/i-im-woman.jpg" alt="i im woman">
+              </a>
+            </div>
           </li>
-          <li>
-            <a href="https://ostin63.github.io/hotelcats/build/index.html">
-              <img src="img/hostelcat.jpg" alt="hostelcat">
-            </a>
+          <li class="website-item">
+            <h3>Hostelcat</h3>
+            <p>Гостиница для кошек</p>
+            <div class="img">
+              <a href="https://ostin63.github.io/hotelcats/build/index.html">
+                <img src="img/hostelcat.jpg" alt="hostelcat">
+              </a>
+            </div>
           </li>
-          <li>
-            <a href="#">
-              <img src="img/miushi.jpg" alt="miushi">
-            </a>
+          <li class="website-item">
+            <h3>Miushi</h3>
+            <p>Торговый сайт</p>
+            <div class="img">
+              <a href="#">
+                <img src="img/miushi.jpg" alt="miushi">
+              </a>
+            </div>
           </li>
-          <li>
-            <a href="https://ostin63.github.io/pilates/build/index.html">
-              <img src="img/pilates.jpg" alt="pilates">
-            </a>
+          <li class="website-item">
+            <h3>Pilates</h3>
+            <p>Сайт пилатеса</p>
+            <div class="img">
+              <a href="https://ostin63.github.io/pilates/build/index.html">
+                <img src="img/pilates.jpg" alt="pilates">
+              </a>
+            </div>
           </li>
-          <li>
-            <a href="https://ostin63.github.io/travelagency/public/index.html">
-              <img src="img/travelagency.jpg" alt="travelagency">
-            </a>
+          <li class="website-item">
+            <h3>Travelagency</h3>
+            <p>Сайт Агенства путишествий</p>
+            <div class="img">
+              <a href="https://ostin63.github.io/travelagency/public/index.html">
+                <img src="img/travelagency.jpg" alt="travelagency">
+              </a>
+            </div>
           </li>
-          <li>
-            <a href="https://ostin63.github.io/gorizont/public/index.html">
-              <img src="img/gorizont.jpg" alt="gorizont">
-            </a>
+          <li class="website-item">
+            <h3>Gorizont</h3>
+            <p>Сайт заготовок</p>
+            <div class="img">
+              <a href="https://ostin63.github.io/gorizont/public/index.html">
+                <img src="img/gorizont.jpg" alt="gorizont">
+              </a>
+            </div>
           </li>
-          <li>
-            <a href="https://ostin63.github.io/voronina/build/index.html">
-              <img src="img/voronina.jpg" alt="voronina">
-            </a>
+          <li class="website-item">
+            <h3>Voronina</h3>
+            <p>Блог</p>
+            <div class="img">
+              <a href="https://ostin63.github.io/voronina/build/index.html">
+                <img src="img/voronina.jpg" alt="voronina">
+              </a>
+            </div>
           </li>
-          <li>
-            <a href="https://ostin63.github.io/yes/public/index.html">
-              <img src="img/yes.jpg" alt="yes">
-            </a>
+          <li class="website-item">
+            <h3>Yes</h3>
+            <p>Школа английского языка</p>
+            <div class="img">
+              <a href="https://ostin63.github.io/yes/public/index.html">
+                <img src="img/yes.jpg" alt="yes">
+              </a>
+            </div>
           </li>
         </ul>
       </div>
     </section>
-    <section class="container">
-      <div class="contacts">
-        <h2>Контоакты</h2>
-        <p><span>&#9993;</span>эл.адресс:<span>upssq@mail.ru</span></p>
-        <p>социальные сети</p>
-        <ul>
-          <li>
-            <a href="https://www.whatsapp.com/?lang=ru">whatsapp
-              <img src="img/whatsapp.png" alt="whatsapp">
-            </a>
-          </li>
-          <li>
-            <a href="https://telegram.org/">telegram</a>
-            <img src="img/telegram.png" alt="telegram">
-          </li>
-          <li>
-            <a href="https://www.viber.com/ru/">viber</a>
-            <img src="img/viber.png" alt="viber">
-          </li>
-          <li>
-            <a href="https://secure.skype.com/portal/overview">skype</a>
-            <img src="img/skype.png" alt="skype">
-          </li>
-        </ul>
+    <section class="container" id="5">
+      <div class="block-contacts">
+        <div class="contacts">
+          <h2>Контакты</h2>
+          <p>&#9993; эл.адресс:<span>upssq@mail.ru</span></p>
+          <div class="block-social">
+            <p>социальные сети:</p>
+            <ul class="social">
+              <li>
+                <a href="https://www.whatsapp.com/?lang=ru">
+                  <img src="img/whatsapp.png" alt="whatsapp">
+                </a>
+              </li>
+              <li>
+                <a href="https://telegram.org/">
+                  <img src="img/telegram.png" alt="telegram">
+                </a>
+              </li>
+              <li>
+                <a href="https://www.viber.com/ru/">
+                  <img src="img/viber.png" alt="viber">
+                </a>
+              </li>
+              <li>
+                <a href="https://secure.skype.com/portal/overview"><img src="img/skype.png" alt="skype">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
   </main>
-  <footer>
-    <div class="container">
-      <div class="copyright">
-        <p>&copy;HomeStudio 2020 г.</p>
+  <footer class="container">
+
+    <div class="copyright">
+      <ul class="nav-site">
+        <li><a href="#1">Hello</a></li>
+        <li><a href="#2">Навыки</a></li>
+        <li><a href="#3">Образование</a></li>
+        <li><a href="#4">Портфолио</a></li>
+        <li><a href="#5">Контакты</a></li>
+      </ul>
+      <div class="block-copyright">
+        <div class="logo">
+          <img src="img/HomeStudio.png" alt="logo">
+        </div>
+        <p>&copy;HomeStudioDmitry 2020 г.</p>
       </div>
     </div>
   </footer>

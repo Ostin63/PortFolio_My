@@ -1,0 +1,37 @@
+.block-contacts {
+  margin-top: 40px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid @color-languid-gray;
+}
+
+.contacts {
+  text-align: center;
+
+  p {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      color: @color-pink;
+    }
+  }
+
+  .block-social {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .social {
+    margin-top: 18px;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media @tablet-widths {
+  .contacts {
+    width: 600px;
+    margin: 0 auto;
+  }
+}

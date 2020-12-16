@@ -1,0 +1,44 @@
+.skills {
+  padding-bottom: 25px;
+  text-align: center;
+  border-bottom: 1px solid @color-languid-gray;
+}
+
+@media @tablet-widths {
+  .block-academy {
+    display: flex;
+    justify-content: space-between;
+
+    .block {
+      width: 320px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .academy-img {
+    width: 320px;
+    box-shadow: 0px 0px 25px rgba(92, 87, 87, 0.25);
+    margin: 3px;
+  }
+}
+
+@media @desktop-widths {
+  .block-academy {
+    display: flex;
+    justify-content: space-between;
+
+    .block {
+      width: 600px;
+      box-shadow: 0px 0px 25px rgba(92, 87, 87, 0.25);
+
+      &:hover {
+        box-shadow: 0px 0px 25px rgba(20, 20, 20, 0.884);
+      }
+    }
+  }
+
+  .academy-img {
+    width: 600px;
+  }
+}

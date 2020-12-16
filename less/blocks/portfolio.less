@@ -1,0 +1,35 @@
+.portfolio {
+  text-align: center;
+  padding-bottom: 25px;
+  border-bottom: 1px solid @color-languid-gray;
+}
+
+.website-item {
+  padding-top: 10px;
+  margin-bottom: 40px;
+  box-shadow: 0px 0px 25px rgba(92, 87, 87, 0.25);
+
+  &:hover {
+    box-shadow: 0px 0px 25px rgba(20, 20, 20, 0.884);
+  }
+}
+
+@media @tablet-widths {
+  .portfolio {
+    margin-top: 40px;
+  }
+  .website {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .website-item {
+    margin-bottom: 40px;
+    box-shadow: 0px 0px 25px rgba(92, 87, 87, 0.25);
+
+    &:hover {
+      box-shadow: 0px 0px 25px rgba(20, 20, 20, 0.884);
+    }
+  }
+}

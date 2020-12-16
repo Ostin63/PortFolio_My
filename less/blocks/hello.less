@@ -1,0 +1,48 @@
+.hello {
+  padding-bottom: 25px;
+  text-align: center;
+  border-bottom: 1px solid @color-languid-gray;
+}
+
+.hello-text {
+  .logo {
+    display: none;
+  }
+}
+
+.hello-img {
+  img {
+    margin: 0 auto;
+  }
+}
+
+@media @tablet-widths {
+  .hello {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .hello-text {
+    width: 70%;
+    margin-right: 40px;
+
+    .logo {
+      margin-top: 70px;
+
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media @desktop-widths {
+  .hello-text {
+    width: 50%;
+
+    .logo {
+      display: block;
+    }
+  }
+}
