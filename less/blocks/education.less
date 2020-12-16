@@ -16,5 +16,34 @@
 
   .block-academy {
     margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+
+    .block {
+      width: 326px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .academy-img {
+    width: 320px;
+    margin: 3px;
+  }
+}
+
+@media @desktop-widths {
+  .block-academy {
+    display: flex;
+    justify-content: space-between;
+
+    .block {
+      width: 600px;
+    }
+  }
+
+  .academy-img {
+    width: 594px;
+    box-shadow: 0px 0px 25px rgba(20, 20, 20, 0.884);
   }
 }
