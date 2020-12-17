@@ -4,10 +4,8 @@
   border-bottom: 1px solid @color-languid-gray;
 }
 
-.hello-text {
-  .logo {
-    display: none;
-  }
+.hello-contacts {
+  display: none;
 }
 
 .hello-img {
@@ -26,23 +24,39 @@
   .hello-text {
     width: 70%;
     margin-right: 40px;
-
-    .logo {
-      margin-top: 70px;
-
-      img {
-        margin: 0 auto;
-      }
-    }
   }
 }
 
+
 @media @desktop-widths {
   .hello-text {
-    width: 50%;
+    width: 40%;
 
-    .logo {
-      display: block;
+    .hello-contacts {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+
+      p {
+        display: flex;
+        justify-content: space-between;
+
+        span {
+          color: @color-pink;
+        }
+      }
+
+      .block-social {
+        display: flex;
+        justify-content: space-between;
+
+        .social {
+          width: 300px;
+          margin-top: 18px;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
     }
   }
 }

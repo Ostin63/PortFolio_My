@@ -518,7 +518,7 @@ a {
   text-align: center;
   border-bottom: 1px solid #646464;
 }
-.hello-text .logo {
+.hello-contacts {
   display: none;
 }
 .hello-img img {
@@ -548,6 +548,7 @@ a {
   margin-bottom: 40px;
   -webkit-box-shadow: 0px 0px 25px rgba(92, 87, 87, 0.25);
           box-shadow: 0px 0px 25px rgba(92, 87, 87, 0.25);
+  z-index: 1;
 }
 .website-item:hover {
   -webkit-box-shadow: 0px 0px 25px rgba(20, 20, 20, 0.884);
@@ -631,12 +632,6 @@ a {
     width: 70%;
     margin-right: 40px;
   }
-  .hello-text .logo {
-    margin-top: 70px;
-  }
-  .hello-text .logo img {
-    margin: 0 auto;
-  }
   .block-vatuga {
     border: 1px solid #646464;
   }
@@ -714,10 +709,46 @@ a {
             box-sizing: border-box;
   }
   .hello-text {
-    width: 50%;
+    width: 40%;
   }
-  .hello-text .logo {
-    display: block;
+  .hello-text .hello-contacts {
+    text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .hello-text .hello-contacts p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .hello-text .hello-contacts p span {
+    color: #FF7236;
+  }
+  .hello-text .hello-contacts .block-social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .hello-text .hello-contacts .block-social .social {
+    width: 300px;
+    margin-top: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .block-academy {
     display: -webkit-box;
