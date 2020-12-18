@@ -521,6 +521,9 @@ a {
 .hello-contacts {
   display: none;
 }
+.hello-contacts p span a {
+  color: #FF7236;
+}
 .hello-img img {
   margin: 0 auto;
 }
@@ -570,7 +573,7 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.contacts p span {
+.contacts p span a {
   color: #FF7236;
 }
 .contacts .block-social {
