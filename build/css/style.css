@@ -617,7 +617,7 @@ a {
   margin: 0 auto;
   margin-top: 18px;
 }
-@media (min-width: 768px) {
+@media (min-width: 786px) {
   .container {
     width: 768px;
     padding: 0 20px;
@@ -714,7 +714,7 @@ a {
     display: none;
   }
 }
-@media (min-width: 1440px) {
+@media (min-width: 1458px) {
   .container {
     width: 1440px;
     padding: 0 30px;
