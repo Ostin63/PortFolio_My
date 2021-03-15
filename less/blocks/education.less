@@ -9,6 +9,22 @@
   }
 }
 
+.block-academy__item {
+  position: relative;
+}
+
+.block-academy__nav {
+  position: absolute;
+  width: 280px;
+  top: calc(50% - 150px / 2);
+  left: calc(50% - 280px / 2);
+  opacity: 0;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
 @media @tablet-widths {
   .block-vatuga {
     border: 1px solid @color-languid-gray;
