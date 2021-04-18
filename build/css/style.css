@@ -469,6 +469,23 @@ a {
   text-decoration: none;
   display: block;
 }
+.button__mail:hover,
+.button__mail:focus,
+.button__mail:focus-visible {
+  opacity: 0.5;
+}
+.button__mail:active {
+  opacity: 1;
+  color: #fdc305;
+}
+.button__social:hover,
+.button__social:focus,
+.button__social:focus-visible {
+  opacity: 0.5;
+}
+.button__social:active {
+  opacity: 0.1;
+}
 .header {
   padding-top: 15px;
   padding-bottom: 15px;
