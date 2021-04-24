@@ -1,7 +1,7 @@
 .block-contacts {
   margin-top: 40px;
   padding-bottom: 25px;
-  border-bottom: 1px solid @color-languid-gray;
+  border-bottom: 1px solid $color-languid-gray;
 }
 
 .contacts {
@@ -12,7 +12,7 @@
     justify-content: space-between;
 
     span a {
-      color: @color-pink;
+      color: $color-pink;
     }
   }
 
@@ -29,7 +29,7 @@
   }
 }
 
-@media @tablet-widths {
+@media (min-width: $tablet-width) {
   .contacts {
     width: 600px;
     margin: 0 auto;

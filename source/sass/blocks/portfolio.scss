@@ -1,7 +1,7 @@
 .portfolio {
   text-align: center;
   padding-bottom: 25px;
-  border-bottom: 1px solid @color-languid-gray;
+  border-bottom: 1px solid $color-languid-gray;
 }
 
 .website-item {
@@ -24,7 +24,7 @@
   }
 }
 
-@media @tablet-widths {
+@media (min-width: $tablet-width) {
   .portfolio {
     margin-top: 40px;
   }

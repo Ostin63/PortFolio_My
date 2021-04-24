@@ -1,91 +1,119 @@
-const gulp = require("gulp");
-const less = require("gulp-less");
+const { src, dest, watch, series, parallel } = require("gulp");
 const plumber = require("gulp-plumber");
+const sourcemap = require("gulp-sourcemaps");
+const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
-const server = require("browser-sync").create();
-const mqpacker = require("css-mqpacker");
-const cssminify = require("gulp-csso");
+const csso = require("postcss-csso");
 const rename = require("gulp-rename");
+const htmlmin = require("gulp-htmlmin");
+const terser = require("gulp-terser");
 const imagemin = require("gulp-imagemin");
+const webp = require("gulp-webp");
+const svgsprite = require("gulp-svg-sprite");
 const del = require("del");
-const uglify = require("gulp-uglify-es").default;
+const sync = require("browser-sync").create();
 
-gulp.task("clean", function () {
-  return del("build");
-});
-
-gulp.task("js", function () {
-  return gulp.src("js/**")
-    .pipe(uglify())
-    .pipe(gulp.dest("build/js"));
-});
-
-gulp.task("copy", function () {
-  return gulp.src([
-    "fonts/**/*.{woff,woff2}",
-    "img/**",
-    "libs/**",
-    "*.html",
-    "css/**"
-  ], {
-    base: "."
-  })
-    .pipe(gulp.dest("build"));
-});
-
-gulp.task("style", function () {
-  return gulp.src("less/style.less")
+const styles = () => {
+  return src("source/sass/style.scss")
     .pipe(plumber())
-    .pipe(less())
+    .pipe(sourcemap.init())
+    .pipe(sass())
     .pipe(postcss([
-      autoprefixer({
-        overrideBrowserslist: [
-          "last 2 versions"
-        ]
-      }),
-      mqpacker({
-        sort: true
-      })
+      autoprefixer(),
+      csso()
     ]))
-    .pipe(gulp.dest("build/css"))
-    .pipe(cssminify())
     .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("build/css"))
-    .pipe(server.stream());
-});
+    .pipe(sourcemap.write("."))
+    .pipe(dest("build/css"))
+    .pipe(sync.stream());
+}
 
-exports.default = () => (
-  gulp.src('build/img/*.{png,jpg}')
+exports.styles = styles;
+
+const html = () => {
+  return src("source/*.html")
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
+    .pipe(dest("build"));
+}
+
+const images = () => {
+  return src("source/img/**/*.{png,jpg,svg}")
     .pipe(imagemin([
-      imagemin.gifsicle({ interlaced: true }),
-      imagemin.mozjpeg({ quality: 75, progressive: true }),
-      imagemin.optipng({ optimizationLevel: 5 }),
-      imagemin.svgo({
-        plugins: [
-          { removeViewBox: true },
-          { cleanupIDs: false }
-        ]
-      })
+      imagemin.mozjpeg({
+        progressive: true
+      }),
+      imagemin.optipng({
+        optimizationLevel: 3
+      }),
+      imagemin.svgo()
     ]))
-    .pipe(gulp.dest('build/img'))
-);
-gulp.task("html:copy", function () {
-  return gulp.src("*.html")
-    .pipe(gulp.dest("build"));
-});
+    .pipe(dest("build/img"))
+}
+exports.images = images;
 
-gulp.task("html:update", function (done) {
-  server.reload();
+const copy = (done) => {
+  src([
+    "source/fonts/*.{woff2,woff}",
+    "source/img/**/*.{jpg,png}"
+  ], {
+    base: "source"
+  })
+    .pipe(dest("build"))
   done();
-});
+}
+exports.copy = copy;
 
-gulp.task("serve", function () {
-  server.init({ server: "build/", notify: false, open: true, cors: true, ui: false });
+const clean = () => {
+  return del("build");
+};
 
-  gulp.watch("less/**/*.less", gulp.task("style"));
-  gulp.watch("js/**/*.js", gulp.task("js"));
-  gulp.watch("*.html", gulp.series("html:copy", "html:update"));
-});
+const server = (done) => {
+  sync.init({
+    server: {
+      baseDir: 'build'
+    },
+    cors: true,
+    notify: false,
+    ui: false,
+  });
+  done();
+}
+exports.server = server;
 
-gulp.task("build", gulp.series("clean", "copy", "js", "style"));
+const reload = done => {
+  sync.reload();
+  done();
+}
+
+const watcher = () => {
+  watch("source/sass/**/*.scss", series(styles));
+  watch("source/*.html", series(html, reload));
+}
+
+const build = series(
+  clean,
+  copy,
+  parallel(
+    styles,
+    html,
+    images
+  )
+);
+
+exports.build = build;
+
+exports.default = series(
+  clean,
+  copy,
+  parallel(
+    styles,
+    html
+  ),
+  series(
+    server,
+    watcher
+  )
+);

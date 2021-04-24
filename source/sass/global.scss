@@ -1,0 +1,124 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+input[type="number"]:not(:focus) {
+  appearance: textfield;
+}
+
+*:focus,
+*:focus-visible {
+  outline: $border-dark-2;
+  outline-offset: 2px;
+}
+
+.container {
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 768px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1440px;
+    padding: 0 30px;
+    margin: 0 auto;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+h1 {
+  font-weight: 600;
+  color: $color-black;
+}
+
+h2 {
+  font-weight: 600;
+  color: $color-black;
+}
+
+h3 {
+  font-weight: 600;
+  color: $color-black;
+}
+
+h4 {
+  font-weight: 600;
+  color: $color-black;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 400;
+  color: $color-languid-gray;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+.button__mail {
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 1;
+    color: #fdc305;
+  }
+}
+
+.button__social {
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+}

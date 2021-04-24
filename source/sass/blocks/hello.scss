@@ -1,7 +1,7 @@
 .hello {
   padding-bottom: 25px;
   text-align: center;
-  border-bottom: 1px solid @color-languid-gray;
+  border-bottom: 1px solid $color-languid-gray;
 }
 
 .hello-contacts {
@@ -9,7 +9,7 @@
 
   p {
     span a {
-      color: @color-pink;
+      color: $color-pink;
     }
   }
 }
@@ -20,7 +20,7 @@
   }
 }
 
-@media @tablet-widths {
+@media (min-width: $tablet-width) {
   .hello {
     margin-top: 50px;
     display: flex;
@@ -33,8 +33,7 @@
   }
 }
 
-
-@media @desktop-widths {
+@media (min-width: $desktop-width) {
   .hello-text {
     width: 40%;
 
@@ -48,7 +47,7 @@
         justify-content: space-between;
 
         span {
-          color: @color-pink;
+          color: $color-pink;
         }
       }
 

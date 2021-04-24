@@ -15,7 +15,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  border-bottom: 1px solid @color-languid-gray;
+  border-bottom: 1px solid $color-languid-gray;
 
   li {
     width: 120px;
@@ -24,12 +24,12 @@
     margin-right: 5px;
     margin-bottom: 5px;
     border-radius: 5px;
-    border: 1px solid @color-languid-gray;
+    border: 1px solid $color-languid-gray;
     transition: .5s;
 
     a {
       text-align: center;
-      color: @color-languid-gray;
+      color: $color-languid-gray;
       font-family: 'Ubuntu', sans-serif;
       cursor: pointer;
     }
@@ -44,7 +44,7 @@
   }
 }
 
-@media @tablet-widths {
+@media (min-width: $tablet-width) {
   .nav-site {
     justify-content: space-between;
 
