@@ -8,29 +8,17 @@ body {
   box-sizing: border-box;
 }
 
-input[type="number"]:not(:focus) {
-  appearance: textfield;
-}
-
-*:focus,
-*:focus-visible {
-  outline: $border-dark-2;
-  outline-offset: 2px;
-}
-
 .container {
-  min-width: 320px;
   margin: 0 auto;
   padding: 0 15px;
 
   @media (min-width: $tablet-width) {
-    min-width: 768px;
     padding: 0 20px;
     margin: 0 auto;
   }
 
   @media (min-width: $desktop-width) {
-    max-width: 1440px;
+    max-width: 1240px;
     padding: 0 30px;
     margin: 0 auto;
   }
@@ -61,28 +49,28 @@ input[type="radio"].visually-hidden {
 
 h1 {
   font-weight: 600;
-  color: $color-black;
+  color: var(--black);
 }
 
 h2 {
   font-weight: 600;
-  color: $color-black;
+  color: var(--black);
 }
 
 h3 {
   font-weight: 600;
-  color: $color-black;
+  color: var(--black);
 }
 
 h4 {
   font-weight: 600;
-  color: $color-black;
+  color: var(--black);
 }
 
 p {
   font-size: 18px;
   font-weight: 400;
-  color: $color-languid-gray;
+  color: var(--languid-gray);
 }
 
 ul {
@@ -106,15 +94,13 @@ a {
 
   &:active {
     opacity: 1;
-    color: #fdc305;
+    color: var(--special-yellow);
   }
 }
 
 .button__social {
 
-  &:hover,
-  &:focus,
-  &:focus-visible {
+  &:hover {
     opacity: 0.5;
   }
 

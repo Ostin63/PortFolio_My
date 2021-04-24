@@ -1,16 +1,28 @@
 .hello {
   padding-bottom: 25px;
   text-align: center;
-  border-bottom: 1px solid $color-languid-gray;
+  border-bottom: $border-languid-gray;
 }
 
 .hello-contacts {
   display: none;
+}
 
-  p {
-    span a {
-      color: $color-pink;
-    }
+.button__mail {
+  color: var(--pink);
+
+  &:focus,
+  &:focus-visible {
+    outline: $border-languid-gray;
+    outline-offset: 10px;
+  }
+}
+
+.button__social {
+  &:focus,
+  &:focus-visible {
+    outline: $border-languid-gray;
+    outline-offset: 10px;
   }
 }
 
@@ -47,7 +59,7 @@
         justify-content: space-between;
 
         span {
-          color: $color-pink;
+          color: var(--pink);
         }
       }
 

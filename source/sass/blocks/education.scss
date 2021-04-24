@@ -1,11 +1,11 @@
 .education {
   text-align: center;
   padding-bottom: 25px;
-  border-bottom: 1px solid $color-languid-gray;
+  border-bottom: $border-languid-gray;
 
   .block-vatuga {
     padding-bottom: 18px;
-    border-bottom: 1px solid $color-languid-gray;
+    border-bottom: $border-languid-gray;
   }
 }
 
@@ -15,19 +15,26 @@
 
 .block-academy__nav {
   position: absolute;
-  width: 280px;
+  width: 260px;
   top: calc(50% - 150px / 2);
-  left: calc(50% - 280px / 2);
+  left: calc(50% - 260px / 2);
   opacity: 0;
 
   &:hover {
+    opacity: 1;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: $border-white;
+    outline-offset: 10px;
     opacity: 1;
   }
 }
 
 @media (min-width: $tablet-width) {
   .block-vatuga {
-    border: 1px solid $color-languid-gray;
+    border: $border-languid-gray;
   }
 
   .block-academy {
@@ -44,7 +51,6 @@
   }
 
   .academy-img {
-    width: 320px;
     margin: 3px;
   }
 }
@@ -60,7 +66,7 @@
   }
 
   .academy-img {
-    width: 594px;
-    box-shadow: 0px 0px 25px rgba(20, 20, 20, 0.884);
+    width: 540px;
+    box-shadow: var(--shadow-90);
   }
 }

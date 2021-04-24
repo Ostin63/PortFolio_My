@@ -40,7 +40,7 @@ const html = () => {
 }
 
 const images = () => {
-  return src("source/img/**/*.{png,jpg,svg}")
+  return src("source/img/**/*.{png,jpg}")
     .pipe(imagemin([
       imagemin.mozjpeg({
         progressive: true
@@ -57,7 +57,10 @@ exports.images = images;
 const copy = (done) => {
   src([
     "source/fonts/*.{woff2,woff}",
-    "source/img/**/*.{jpg,png}"
+    "source/*.ico",
+    "source/img/favicon/favicon.svg",
+    "source/img/**/*.{jpg,png}",
+    "source/*.webmanifest"
   ], {
     base: "source"
   })

@@ -1,7 +1,6 @@
 .header {
   padding-top: 15px;
   padding-bottom: 15px;
-  box-sizing: border-box;
 
   .logo {
     img {
@@ -15,7 +14,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  border-bottom: 1px solid $color-languid-gray;
+  border-bottom: $border-languid-gray;
 
   li {
     width: 120px;
@@ -24,22 +23,28 @@
     margin-right: 5px;
     margin-bottom: 5px;
     border-radius: 5px;
-    border: 1px solid $color-languid-gray;
-    transition: .5s;
+    border: $border-languid-gray;
+    transition: 0.5s;
 
     a {
       text-align: center;
-      color: $color-languid-gray;
+      color: var(--languid-gray);
       font-family: 'Ubuntu', sans-serif;
       cursor: pointer;
+
+      &:focus,
+      &:focus-visible {
+        outline: $border-languid-gray;
+        outline-offset: 10px;
+      }
     }
 
     &:hover {
-      box-shadow: 5px 5px 6px 0px rgba(0, 0, 0, 0.4);
+      box-shadow: var(--shadow-hover);
     }
 
     &:active {
-      box-shadow: 5px 5px 6px 0px rgba(100, 100, 100, 0.4);
+      box-shadow: var(--shadow-active);
     }
   }
 }

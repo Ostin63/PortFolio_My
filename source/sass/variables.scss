@@ -1,11 +1,26 @@
 $tablet-width: 768px;
-$desktop-width: 1440px;
+$desktop-width: 1240px;
 
-$color-white: #FFFEFD;
-$color-white-white: #FFFFFF;
-$color-pink: #FF7236;
-$color-black: #4d4d50;
-$color-yellow: #FAC663;
-$color-soft-gray: #E5E5E5;
-$color-gray: #E1E1E1;
-$color-languid-gray: #646464;
+:root {
+  --white: #FFFEFD;
+  --white-white: #FFFFFF;
+  --pink: #FF7236;
+  --black: #4d4d50;
+  --black-90: rgba(20, 20, 20, 0.9);
+  --black-40: rgba(0, 0, 0, 0.4);
+  --yellow: #FAC663;
+  --special-yellow: #fdc305;
+  --soft-gray: #E5E5E5;
+  --gray: #E1E1E1;
+  --gray-25: rgba(92, 87, 87, 0.25);
+  --gray-40: rgba(100, 100, 100, 0.4);
+  --languid-gray: #646464;
+  --shadow-90: 0px 0px 25px var(--black-90);
+  --shadow-hover: 5px 5px 6px 0px var(--black-40);
+  --shadow-active: 5px 5px 6px 0px var(--gray-40);
+  --shadow-25: 0px 0px 25px var(--gray-25);
+}
+
+
+$border-languid-gray: 1px solid var(--languid-gray);
+$border-white: 1px solid var(--white);
