@@ -3,3 +3,35 @@
   text-align: center;
   border-bottom: $border-languid-gray;
 }
+
+.html,
+.gulp,
+.bst {
+  color: var(--pink);
+}
+
+.css,
+.js,
+.git {
+  color: var(--special-yellow);
+}
+
+.sass,
+.php,
+.oc {
+  color: var(--special-blue);
+}
+
+.less,
+.jq,
+.fig {
+  color: var(--special-green);
+}
+
+.adobe {
+  color: var(--special-purple);
+}
+
+.ph {
+  color: var(--special-yellow);
+}
