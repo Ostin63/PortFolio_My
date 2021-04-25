@@ -15,6 +15,15 @@
     transition: 1s;
   }
 
+
+  &:hover {
+    box-shadow: var(--shadow-90);
+  }
+}
+
+.img-link {
+  outline: none;
+
   &:hover {
     box-shadow: var(--shadow-90);
 
@@ -22,14 +31,11 @@
       transform: scale(1.4);
     }
   }
-}
 
-.img-link {
   &:focus,
   &:focus-visible {
     img {
       transform: scale(1.4);
-      outline: none;
     }
   }
 }
@@ -48,9 +54,5 @@
   .website-item {
     margin-bottom: 40px;
     box-shadow: var(--shadow-25);
-
-    &:hover {
-      box-shadow: var(--shadow-90);
-    }
   }
 }
