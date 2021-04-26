@@ -66,6 +66,18 @@ const logo = () => {
 }
 exports.logo = logo;
 
+const svgstack = () => {
+  return src("source/img/icons/**/*.svg")
+    .pipe(svgsprite({
+      mode: {
+        stack: {}
+      }
+    }))
+    .pipe(rename("stack.svg"))
+    .pipe(dest("build/img"));
+}
+exports.svgstack = svgstack;
+
 const copy = (done) => {
   src([
     "source/fonts/*.{woff2,woff}",
@@ -114,7 +126,8 @@ exports.default = series(
     styles,
     html,
     images,
-    logo
+    logo,
+    svgstack
   ),
   series(
     server,

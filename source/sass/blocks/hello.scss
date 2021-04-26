@@ -19,6 +19,27 @@
 }
 
 .button__social {
+  width: 25px;
+  height: 25px;
+  display: block;
+  background-size: cover;
+
+  &--whatsapp {
+    background: url("../img/stack.svg#whatsapp") 50% 50% no-repeat;
+  }
+
+  &--telegram {
+    background: url("../img/stack.svg#telegram") 50% 50% no-repeat;
+  }
+
+  &--viber {
+    background: url("../img/stack.svg#viber") 50% 50% no-repeat;
+  }
+
+  &--skype {
+    background: url("../img/stack.svg#skype") 50% 50% no-repeat;
+  }
+
   &:focus,
   &:focus-visible {
     outline: $border-languid-gray;
