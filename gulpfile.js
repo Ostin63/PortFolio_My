@@ -40,7 +40,7 @@ const html = () => {
 }
 
 const images = () => {
-  return src("source/img/**/*.{png,jpg}")
+  return src("source/img/*.{png,jpg}")
     .pipe(imagemin([
       imagemin.mozjpeg({
         progressive: true
@@ -59,7 +59,7 @@ const copy = (done) => {
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
     "source/img/favicon/favicon.svg",
-    "source/img/**/*.{jpg,png}",
+    "source/img/logo/*.{jpg,png,svg}",
     "source/*.webmanifest"
   ], {
     base: "source"
@@ -96,24 +96,13 @@ const watcher = () => {
   watch("source/*.html", series(html, reload));
 }
 
-const build = series(
+exports.default = series(
   clean,
   copy,
   parallel(
     styles,
     html,
     images
-  )
-);
-
-exports.build = build;
-
-exports.default = series(
-  clean,
-  copy,
-  parallel(
-    styles,
-    html
   ),
   series(
     server,
