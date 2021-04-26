@@ -54,12 +54,23 @@ const images = () => {
 }
 exports.images = images;
 
+const logo = () => {
+  return src("source/img/logo/*.svg")
+    .pipe(svgsprite({
+      mode: {
+        stack: {}
+      }
+    }))
+    .pipe(rename("logo.svg"))
+    .pipe(dest("build/img"))
+}
+exports.logo = logo;
+
 const copy = (done) => {
   src([
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
     "source/img/favicon/favicon.svg",
-    "source/img/logo/*.{jpg,png,svg}",
     "source/*.webmanifest"
   ], {
     base: "source"
@@ -102,7 +113,8 @@ exports.default = series(
   parallel(
     styles,
     html,
-    images
+    images,
+    logo
   ),
   series(
     server,
