@@ -8,6 +8,21 @@
   display: none;
 }
 
+.hello__email {
+  position: relative;
+  padding-left: 30px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 16px;
+    top: 5px;
+    left: 0;
+    background: url("../img/stack.svg#email") 50% 50% no-repeat;
+  }
+}
+
 .button__mail {
   color: var(--pink);
 
