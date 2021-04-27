@@ -4,28 +4,132 @@
   border-bottom: $border-languid-gray;
 }
 
-.html,
-.gulp,
-.bst {
-  color: var(--pink);
+@media (min-width: $tablet-width) {
+  .skills__tablet {
+    padding: 5px;
+    border: $border-yellow;
+  }
 }
 
-.css,
-.js,
-.git {
-  color: var(--special-yellow);
+@media (min-width: $desktop-width) {
+  .skills__desktop {
+    padding: 5px;
+    border: $border-green;
+  }
 }
 
-.sass,
-.php,
-.oc {
-  color: var(--special-blue);
+.skills__list {
+  width: 100%;
+  padding: 5px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border: $border-pink;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(5, 21px);
+    grid-template-areas:
+      "html . . gulp . . bst . ."
+      ". sass . . php . oc oc ."
+      ". . less . . jq . fig ."
+      ". . . css . git git . js"
+      ". . ah ah ah ah ah . .";
+  }
 }
 
-.less,
-.jq,
-.fig {
-  color: var(--special-green);
+.skills__item {
+
+  p {
+    display: block;
+    margin: 0;
+  }
+
+  &--html {
+    grid-area: html;
+  }
+
+  &--gulp {
+    grid-area: gulp;
+  }
+
+  &--bst {
+    grid-area: bst;
+  }
+
+  &--css {
+    grid-area: css;
+  }
+
+  &--js {
+    grid-area: js;
+  }
+
+  &--git {
+    grid-area: git;
+  }
+
+  &--sass {
+    grid-area: sass;
+  }
+
+  &--php {
+    grid-area: php;
+  }
+
+  &--oc {
+    grid-area: oc;
+  }
+
+  &--less {
+    grid-area: less;
+  }
+
+  &--jq {
+    grid-area: jq;
+  }
+
+  &--fig {
+    grid-area: fig;
+  }
+
+  &--adobe-ph {
+    grid-area: ah;
+  }
+
+  &--html,
+  &--gulp,
+  &--bst {
+    p {
+      color: var(--pink);
+    }
+  }
+
+  &--css,
+  &--js,
+  &--git {
+    p {
+      color: var(--special-yellow);
+    }
+  }
+
+  &--sass,
+  &--php,
+  &--oc {
+    p {
+      color: var(--special-blue);
+    }
+  }
+
+  &--less,
+  &--jq,
+  &--fig {
+    p {
+      color: var(--special-green);
+    }
+  }
 }
 
 .adobe {

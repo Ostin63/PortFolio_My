@@ -11,6 +11,14 @@
 
 .block-academy__item {
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    width: 298px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 540px;
+  }
 }
 
 .academy-img {
@@ -57,31 +65,17 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-
-    .block {
-      width: 326px;
-      display: flex;
-      flex-direction: column;
-    }
   }
 
   .academy-img {
-    width: 280px;
-    margin: 3px;
+    width: 298px;
+    margin: 0;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .block-academy {
-    display: flex;
-    justify-content: space-between;
-
-    .block {
-      width: 600px;
-    }
-  }
-
   .academy-img {
     width: 540px;
+    display: block;
   }
 }
