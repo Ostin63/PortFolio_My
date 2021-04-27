@@ -4,20 +4,6 @@
   border-bottom: $border-languid-gray;
 }
 
-@media (min-width: $tablet-width) {
-  .skills__tablet {
-    padding: 5px;
-    border: $border-yellow;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .skills__desktop {
-    padding: 5px;
-    border: $border-green;
-  }
-}
-
 .skills__list {
   width: 100%;
   padding: 5px;
@@ -25,7 +11,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  border: $border-pink;
+  border: $border-languid-gray;
 
   @media (min-width: $tablet-width) {
     display: grid;
