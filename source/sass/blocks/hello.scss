@@ -4,63 +4,10 @@
   border-bottom: $border-languid-gray;
 }
 
-.hello-contacts {
+.hello__contacts {
   display: none;
 }
 
-.hello__email {
-  position: relative;
-  padding-left: 30px;
-
-  &::before {
-    position: absolute;
-    content: "";
-    width: 20px;
-    height: 16px;
-    top: 5px;
-    left: 0;
-    background: url("../img/stack.svg#email") 50% 50% no-repeat;
-  }
-}
-
-.button__mail {
-  color: var(--pink);
-
-  &:focus,
-  &:focus-visible {
-    outline: $border-languid-gray;
-    outline-offset: 10px;
-  }
-}
-
-.button__social {
-  width: 25px;
-  height: 25px;
-  display: block;
-  background-size: cover;
-
-  &--whatsapp {
-    background: url("../img/stack.svg#whatsapp") 50% 50% no-repeat;
-  }
-
-  &--telegram {
-    background: url("../img/stack.svg#telegram") 50% 50% no-repeat;
-  }
-
-  &--viber {
-    background: url("../img/stack.svg#viber") 50% 50% no-repeat;
-  }
-
-  &--skype {
-    background: url("../img/stack.svg#skype") 50% 50% no-repeat;
-  }
-
-  &:focus,
-  &:focus-visible {
-    outline: $border-languid-gray;
-    outline-offset: 6px;
-  }
-}
 
 .hello-img {
   img {
@@ -75,40 +22,107 @@
     justify-content: space-between;
   }
 
-  .hello-text {
+  .hello__block-text {
     width: 70%;
     margin-right: 40px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .hello-text {
+  .hello__block-text {
     width: 40%;
 
-    .hello-contacts {
+    .hello__contacts {
       text-align: left;
       display: flex;
       flex-direction: column;
 
-      p {
-        display: flex;
-        justify-content: space-between;
+    }
 
-        span {
-          color: var(--pink);
-        }
+    .hello__email {
+      position: relative;
+      padding-left: 50px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 16px;
+        top: 5px;
+        left: 0;
+        background: url("../img/stack.svg#email") 50% 50% no-repeat;
+      }
+    }
+
+    .hello__email,
+    .hello__social {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .hello__button-mail {
+      color: var(--pink);
+
+      &:hover {
+        opacity: 0.6;
       }
 
-      .block-social {
-        display: flex;
-        justify-content: space-between;
+      &:focus,
+      &:focus-visible {
+        opacity: 0.6;
+        outline: $border-pink;
+        outline-offset: 5px;
+      }
 
-        .social {
-          width: 300px;
-          margin-top: 18px;
-          display: flex;
-          justify-content: space-between;
-        }
+      &:active {
+        opacity: 0.3;
+      }
+    }
+
+    .hello__social-list {
+      width: 300px;
+      margin-top: 18px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+
+    .hello__social-link {
+      width: 25px;
+      height: 25px;
+      display: block;
+      background-size: cover;
+
+      &--whatsapp {
+        background: url("../img/stack.svg#whatsapp") 50% 50% no-repeat;
+      }
+
+      &--telegram {
+        background: url("../img/stack.svg#telegram") 50% 50% no-repeat;
+      }
+
+      &--viber {
+        background: url("../img/stack.svg#viber") 50% 50% no-repeat;
+      }
+
+      &--skype {
+        background: url("../img/stack.svg#skype") 50% 50% no-repeat;
+      }
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+
+      &:focus,
+      &:focus-visible {
+        outline: $border-languid-gray;
+        outline-offset: 6px;
+        opacity: 0.6;
+      }
+
+      &:active {
+        opacity: 0.3;
       }
     }
   }

@@ -1,37 +1,112 @@
-.block-contacts {
+.contacts {
   margin-top: 40px;
   padding-bottom: 25px;
   border-bottom: $border-languid-gray;
+  text-align: center;
 }
 
-.contacts {
-  text-align: center;
+.contacts__email {
+  position: relative;
+  padding-left: 30px;
+  display: flex;
+  justify-content: space-between;
 
-  p {
-    display: flex;
-    justify-content: space-between;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 16px;
+    top: 5px;
+    left: 0;
+    background: url("../img/stack.svg#email") 50% 50% no-repeat;
+  }
+}
 
-    span a {
-      color: var(--pink);
-    }
+.contacts__button-mail {
+  color: var(--pink);
+
+  &:hover {
+    opacity: 0.6;
   }
 
-  .block-social {
-    display: flex;
-    justify-content: space-between;
+  &:focus,
+  &:focus-visible {
+    opacity: 0.6;
+    outline: $border-pink;
+    outline-offset: 5px;
   }
 
-  .social {
-    margin-top: 18px;
-    width: 40%;
-    display: flex;
-    justify-content: space-between;
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.contacts__block-social {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts__social {
+  margin-top: 18px;
+  width: 40%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.contacts__social-link {
+  width: 25px;
+  height: 25px;
+  display: block;
+  background-size: cover;
+
+  &--whatsapp {
+    background: url("../img/stack.svg#whatsapp") 50% 50% no-repeat;
+  }
+
+  &--telegram {
+    background: url("../img/stack.svg#telegram") 50% 50% no-repeat;
+  }
+
+  &--viber {
+    background: url("../img/stack.svg#viber") 50% 50% no-repeat;
+  }
+
+  &--skype {
+    background: url("../img/stack.svg#skype") 50% 50% no-repeat;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+
+  &:focus,
+  &:focus-visible {
+    outline: $border-languid-gray;
+    outline-offset: 6px;
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
 @media (min-width: $tablet-width) {
   .contacts {
-    width: 600px;
-    margin: 0 auto;
+    padding-left: 220px;
+    padding-right: 220px;
+  }
+
+  .contacts__block-social {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .contacts__social {
+    margin: 0;
+    align-items: center;
   }
 }
