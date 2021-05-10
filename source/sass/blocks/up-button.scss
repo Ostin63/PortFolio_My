@@ -2,7 +2,7 @@
   position: fixed;
   padding: 0;
   bottom: 75px;
-  right: 20px;
+  right: 50px;
   width: 54px;
   height: 54px;
   border: $border-green;
@@ -14,7 +14,6 @@
   @media (min-width: $tablet-width) {
     width: 64px;
     height: 64px;
-    right: 65px;
   }
 }
 
