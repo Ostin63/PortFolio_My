@@ -39,6 +39,16 @@ const html = () => {
     .pipe(dest("build"));
 }
 
+const scripts = () => {
+  return src("source/js/*.js")
+    .pipe(terser())
+    .pipe(rename("script.min.js"))
+    .pipe(dest('build/js'))
+    .pipe(sync.stream())
+}
+
+exports.scripts = scripts;
+
 const images = () => {
   return src("source/img/*.{png,jpg}")
     .pipe(imagemin([
@@ -116,6 +126,7 @@ const reload = done => {
 
 const watcher = () => {
   watch("source/sass/**/*.scss", series(styles));
+  watch("source/js/*.js", series(scripts));
   watch("source/*.html", series(html, reload));
 }
 
@@ -125,6 +136,7 @@ exports.default = series(
   parallel(
     styles,
     html,
+    scripts,
     images,
     logo,
     svgstack

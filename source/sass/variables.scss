@@ -5,6 +5,7 @@ $desktop-width: 1240px;
 :root {
   --white: #FFFEFD;
   --white-white: #FFFFFF;
+  --white-00: rgba(255, 255, 255, 0);
   --pink: #FF7236;
   --black: #4d4d50;
   --black-90: rgba(20, 20, 20, 0.9);
@@ -33,5 +34,9 @@ $border-pink: 2px solid var(--pink);
 $border-yellow: 3px solid var(--yellow);
 $border-green: 3px solid var(--special-green);
 
-$fond-ubuntu: "Ubuntu", "Arial", sans-serif;
-$fond-adigiana: "Adigiana-extreme", "Arial", sans-serif;
+$fond-ubuntu: "Ubuntu",
+"Arial",
+sans-serif;
+$fond-adigiana: "Adigiana-extreme",
+"Arial",
+sans-serif;

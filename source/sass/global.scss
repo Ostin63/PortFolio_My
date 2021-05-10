@@ -4,6 +4,10 @@ body {
   font-family: 'Ubuntu', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 *,
 *::before,
 *::after {
