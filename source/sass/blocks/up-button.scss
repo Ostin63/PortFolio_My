@@ -8,8 +8,13 @@
   border: $border-green;
   border-radius: 50%;
   background-color: var(--white-00);
+  cursor: pointer;
   z-index: 100;
   display: none;
+
+  &:hover {
+    opacity: 0.5;
+  }
 
   @media (min-width: $tablet-width) {
     width: 64px;
