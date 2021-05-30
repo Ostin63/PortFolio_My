@@ -40,7 +40,7 @@
 .nav-link {
   text-align: center;
   color: var(--languid-gray);
-  font-family: 'Ubuntu', sans-serif;
+  font-family: $fond-ubuntu;
   cursor: pointer;
 
   &:focus,
