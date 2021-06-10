@@ -50,7 +50,7 @@ const scripts = () => {
 exports.scripts = scripts;
 
 const images = () => {
-  return src("source/img/*.{png,jpg}")
+  return src("source/img/**/*.{png,jpg}")
     .pipe(imagemin([
       imagemin.mozjpeg({
         progressive: true
@@ -65,7 +65,7 @@ const images = () => {
 exports.images = images;
 
 const logo = () => {
-  return src("source/img/logo/*.svg")
+  return src("source/img/logo/**/*.svg")
     .pipe(svgsprite({
       mode: {
         stack: {}
