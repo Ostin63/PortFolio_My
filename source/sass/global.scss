@@ -79,6 +79,7 @@ a {
 }
 
 .button__mail {
+
   &:hover,
   &:focus,
   &:focus-visible {
@@ -98,5 +99,51 @@ a {
 
   &:active {
     opacity: 0.1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  @keyframes animBackground {
+    from {
+      transform: translate(930px, 350px);
+    }
+
+    35% {
+      transform: translate(0, 0);
+    }
+
+    50% {
+      transform: translate(0, 350px);
+    }
+
+    85% {
+      transform: translate(930px, 0);
+    }
+
+    to {
+      transform: translate(930px, 350px);
+    }
+  }
+
+  @keyframes animBack {
+    from {
+      transform: translate(0, 370px);
+    }
+
+    15% {
+      transform: translate(0, 0);
+    }
+
+    50% {
+      transform: translate(930px, 0);
+    }
+
+    65% {
+      transform: translate(930px, 370px);
+    }
+
+    to {
+      transform: translate(0, 370px);
+    }
   }
 }

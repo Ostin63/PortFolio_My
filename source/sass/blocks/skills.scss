@@ -1,7 +1,36 @@
 .skills {
+  position: relative;
   padding-bottom: 25px;
   text-align: center;
   border-bottom: $border-languid-gray;
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      position: absolute;
+      content: "";
+      width: 300px;
+      height: 100px;
+      top: 0;
+      left: 0;
+      background: url("../img/css.jpg") 50% 50% no-repeat;
+      animation: animBackground 260s infinite linear;
+      z-index: -1;
+      opacity: 0.2;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 300px;
+      height: 100px;
+      top: 0;
+      left: 0;
+      background: url("../img/js.jpg") 50% 50% no-repeat;
+      animation: animBack 260s infinite linear;
+      z-index: -1;
+      opacity: 0.2;
+    }
+  }
 }
 
 .skills__list {
