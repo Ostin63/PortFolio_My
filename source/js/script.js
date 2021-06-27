@@ -26,9 +26,9 @@ L.tileLayer(
 ).addTo(map);
 
 const mainPinIcon = L.icon({
-  iconUrl: 'https://assets.htmlacademy.ru/content/intensive/javascript-1/demo/interactive-map/main-pin.svg',
-  iconSize: [52, 52],
-  iconAnchor: [26, 52],
+  iconUrl: 'img/pin-home.png',
+  iconSize: [40, 60],
+  iconAnchor: [20, 60],
 });
 
 const mainPinMarker = L.marker(
@@ -47,3 +47,5 @@ mainPinMarker.addTo(map);
 mainPinMarker.on('moveend', (evt) => {
   console.log(evt.target.getLatLng());
 });
+
+// 60.71618, 28.75676 ВАТУ ГА
