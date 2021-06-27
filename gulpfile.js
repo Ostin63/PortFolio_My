@@ -93,7 +93,9 @@ const copy = (done) => {
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
     "source/img/favicon/favicon.svg",
-    "source/*.webmanifest"
+    "source/*.webmanifest",
+    "source/leaflet/*.{css,js}",
+    "source/leaflet/images/*.png"
   ], {
     base: "source"
   })
