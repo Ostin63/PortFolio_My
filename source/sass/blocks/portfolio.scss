@@ -17,9 +17,32 @@
     transition: 1s;
   }
 
-
   &:hover {
     box-shadow: var(--shadow-90);
+  }
+}
+
+.portfolio__text {
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio__title-panel {
+  width: 40px;
+  margin-left: 5px;
+  padding-top: 2px;
+  border-radius: 5px;
+  border: $border-languid-gray;
+  background: var(--pink);
+  color: var(--white-white);
+  font-size: 12px;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    background: var(--yellow);
   }
 }
 
