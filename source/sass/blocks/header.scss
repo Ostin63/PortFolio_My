@@ -4,6 +4,15 @@
   border-bottom: $border-languid-gray;
 }
 
+.header__block-logo {
+  text-align: center;
+}
+
+.header__link-logo {
+  display: inline-block;
+  padding: 2px;
+}
+
 .header__logo {
   width: 242px;
   height: 72px;

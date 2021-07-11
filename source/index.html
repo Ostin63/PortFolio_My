@@ -18,12 +18,16 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
+<body class="body">
 
   <header class="header container">
-    <svg class="header__logo" role="img" width="242" height="72">
-      <use xlink:href="img/logo.svg#logo"></use>
-    </svg>
+    <div class="header__block-logo">
+      <a class="header__link-logo" href="#">
+        <svg class="header__logo" role="img" width="242" height="72">
+          <use xlink:href="img/logo.svg#logo"></use>
+        </svg>
+      </a>
+    </div>
     <ul class="header__nav-site">
       <li class="header__nav-item nav-item">
         <a class="header__nav-link nav-link" href="#1">Hello</a>
@@ -371,9 +375,11 @@
         </li>
       </ul>
       <div class="footer__block-copyright">
-        <svg class="footer__logo" role="img" width="150" height="60">
-          <use xlink:href="img/logo.svg#logo"></use>
-        </svg>
+        <a class="footer__link-logo" href="#">
+          <svg class="footer__logo" role="img" width="150" height="60">
+            <use xlink:href="img/logo.svg#logo"></use>
+          </svg>
+        </a>
         <p>&copy;HomeStudioDmitry 2020 г.</p>
       </div>
     </div>
@@ -383,6 +389,12 @@
       <use xlink:href="img/stack.svg#arrow-up"></use>
     </svg>
   </button>
+
+  <template id="error">
+    <div class="error">
+      <p class="error__message">Сайт временно не работает, поробуйте позже</p>
+    </div>
+  </template>
 
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="

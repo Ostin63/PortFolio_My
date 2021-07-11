@@ -8,8 +8,9 @@ $desktop-width: 1240px;
   --white-00: rgba(255, 255, 255, 0);
   --pink: #ff7236;
   --black: #4d4d50;
-  --black-90: rgba(20, 20, 20, 0.9);
   --black-40: rgba(0, 0, 0, 0.4);
+  --black-80: rgba(20, 20, 20, 0.8);
+  --black-90: rgba(20, 20, 20, 0.9);
   --yellow: #fac663;
   --special-yellow: #fdc305;
   --special-blue: #32a6f3;
@@ -34,5 +35,9 @@ $border-pink: 2px solid var(--pink);
 $border-yellow: 3px solid var(--yellow);
 $border-green: 3px solid var(--special-green);
 
-$fond-ubuntu: "Ubuntu", "Arial", sans-serif;
-$fond-adigiana: "Adigiana-extreme", "Arial", sans-serif;
+$fond-ubuntu: "Ubuntu",
+"Arial",
+sans-serif;
+$fond-adigiana: "Adigiana-extreme",
+"Arial",
+sans-serif;

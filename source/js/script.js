@@ -1,4 +1,19 @@
-const upButton = document.querySelector('.up-button');
+const body = document.querySelector('.body');
+const upButton = body.querySelector('.up-button');
+const headerLinkLogo = body.querySelector('.header__link-logo');
+const footerLinkLogo = body.querySelector('.footer__link-logo');
+const errorMessage = body.querySelector('#error')
+  .content
+  .querySelector('.error');
+
+const onError = (evt) => {
+  evt.preventDefault();
+  body.append(errorMessage);
+
+  setTimeout(() => {
+    errorMessage.remove();
+  }, 3000);
+};
 
 window.onscroll = () => {
   if (window.pageYOffset > 300) {
@@ -47,5 +62,9 @@ mainPinMarker.addTo(map);
 mainPinMarker.on('moveend', (evt) => {
   console.log(evt.target.getLatLng());
 });
+
+
+headerLinkLogo.addEventListener('click', onError);
+footerLinkLogo.addEventListener('click', onError);
 
 // 60.71618, 28.75676 ВАТУ ГА
