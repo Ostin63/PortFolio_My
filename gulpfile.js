@@ -9,7 +9,6 @@ const rename = require("gulp-rename");
 const htmlmin = require("gulp-htmlmin");
 const terser = require("gulp-terser");
 const imagemin = require("gulp-imagemin");
-const webp = require("gulp-webp");
 const svgsprite = require("gulp-svg-sprite");
 const del = require("del");
 const sync = require("browser-sync").create();
