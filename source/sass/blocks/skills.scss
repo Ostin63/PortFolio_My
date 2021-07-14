@@ -46,11 +46,11 @@
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: repeat(5, 1fr);
     grid-template-areas:
-      "html . . gulp . . bst . ."
+      "html . . gulp . . bst . bem"
       ". sass . . php . oc oc ."
       ". . less . . jq . fig ."
-      ". . . css . git git . js"
-      ". . ah ah ah ah ah . .";
+      "grid . . css . git git . js"
+      ". .ah ah ah ah flex flex .";
   }
 }
 
@@ -78,6 +78,18 @@
 
   &--bst {
     grid-area: bst;
+  }
+
+  &--bem {
+    grid-area: bem;
+  }
+
+  &--flex {
+    grid-area: flex;
+  }
+
+  &--grid {
+    grid-area: grid;
   }
 
   &--css {
@@ -122,7 +134,8 @@
 
   &--html,
   &--gulp,
-  &--bst {
+  &--bst,
+  &--bem {
     p {
       color: var(--pink);
     }
@@ -130,7 +143,8 @@
 
   &--css,
   &--js,
-  &--git {
+  &--git,
+  &--grid {
     p {
       color: var(--special-yellow);
     }
@@ -149,6 +163,12 @@
   &--fig {
     p {
       color: var(--special-green);
+    }
+  }
+
+  &--flex {
+    p {
+      color: var(--special-purple);
     }
   }
 }
