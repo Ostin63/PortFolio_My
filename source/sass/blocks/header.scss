@@ -2,6 +2,10 @@
   padding-top: 15px;
   padding-bottom: 15px;
   border-bottom: $border-languid-gray;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 30px;
+  }
 }
 
 .header__block-logo {
@@ -25,14 +29,16 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+
+  @media (min-width: $desktop-width) {
+    justify-content: space-between;
+  }
 }
 
 .nav-item {
   width: 120px;
   padding: 5px;
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-bottom: 5px;
+  margin: 0 5px 5px;
   border-radius: 5px;
   border: $border-languid-gray;
   transition: 0.5s;
@@ -55,15 +61,5 @@
   &:focus,
   &:focus-visible {
     outline-offset: 8px;
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .header__nav-site {
-    justify-content: space-between;
-  }
-
-  .header__nav-item {
-    margin-bottom: 15px;
   }
 }
