@@ -10,8 +10,22 @@
 
 
 .hello-img {
+  max-width: 344px;
+  height: auto;
+  margin: 0 auto;
+  mask-image: url("../img/mask.png");
+  mask-repeat: no-repeat;
+  mask-size: 100% auto;
+  mask-position: 50% 50%;
+
   img {
+    width: 100%;
+    height: auto;
     margin: 0 auto;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 0 auto;
   }
 }
 
@@ -23,106 +37,100 @@
   }
 
   .hello__block-text {
-    width: 70%;
+    width: 50%;
     margin-right: 40px;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .hello__block-text {
-    width: 40%;
+  .hello__contacts {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
 
-    .hello__contacts {
-      text-align: left;
-      display: flex;
-      flex-direction: column;
+  .hello__email {
+    position: relative;
+    padding-left: 50px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 16px;
+      top: 5px;
+      left: 0;
+      background: url("../img/stack.svg#email") 50% 50% no-repeat;
+    }
+  }
+
+  .hello__email,
+  .hello__social {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .hello__button-mail {
+    color: var(--pink);
+
+    &:hover {
+      opacity: 0.6;
     }
 
-    .hello__email {
-      position: relative;
-      padding-left: 50px;
-
-      &::before {
-        position: absolute;
-        content: "";
-        width: 20px;
-        height: 16px;
-        top: 5px;
-        left: 0;
-        background: url("../img/stack.svg#email") 50% 50% no-repeat;
-      }
+    &:focus,
+    &:focus-visible {
+      opacity: 0.6;
+      outline: $border-pink;
+      outline-offset: 5px;
     }
 
-    .hello__email,
-    .hello__social {
-      display: flex;
-      justify-content: space-between;
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .hello__social-list {
+    width: 200px;
+    margin: auto 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  .hello__social-link {
+    width: 25px;
+    height: 25px;
+    display: block;
+    background-size: cover;
+
+    &--whatsapp {
+      background: url("../img/stack.svg#whatsapp") 50% 50% no-repeat;
     }
 
-    .hello__button-mail {
-      color: var(--pink);
-
-      &:hover {
-        opacity: 0.6;
-      }
-
-      &:focus,
-      &:focus-visible {
-        opacity: 0.6;
-        outline: $border-pink;
-        outline-offset: 5px;
-      }
-
-      &:active {
-        opacity: 0.3;
-      }
+    &--telegram {
+      background: url("../img/stack.svg#telegram") 50% 50% no-repeat;
     }
 
-    .hello__social-list {
-      width: 300px;
-      margin: auto 0;
-      display: flex;
-      justify-content: space-between;
+    &--github {
+      background: url("../img/stack.svg#github-icon") 50% 50% no-repeat;
+    }
+
+    &--skype {
+      background: url("../img/stack.svg#skype") 50% 50% no-repeat;
+    }
+
+    &:hover {
+      opacity: 0.6;
     }
 
 
-    .hello__social-link {
-      width: 25px;
-      height: 25px;
-      display: block;
-      background-size: cover;
+    &:focus,
+    &:focus-visible {
+      outline: $border-languid-gray;
+      outline-offset: 6px;
+      opacity: 0.6;
+    }
 
-      &--whatsapp {
-        background: url("../img/stack.svg#whatsapp") 50% 50% no-repeat;
-      }
-
-      &--telegram {
-        background: url("../img/stack.svg#telegram") 50% 50% no-repeat;
-      }
-
-      &--github {
-        background: url("../img/stack.svg#github-icon") 50% 50% no-repeat;
-      }
-
-      &--skype {
-        background: url("../img/stack.svg#skype") 50% 50% no-repeat;
-      }
-
-      &:hover {
-        opacity: 0.6;
-      }
-
-
-      &:focus,
-      &:focus-visible {
-        outline: $border-languid-gray;
-        outline-offset: 6px;
-        opacity: 0.6;
-      }
-
-      &:active {
-        opacity: 0.3;
-      }
+    &:active {
+      opacity: 0.3;
     }
   }
 }

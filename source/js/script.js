@@ -1,4 +1,9 @@
+/* eslint-disable id-length */
+/* eslint-disable no-shadow */
 const body = document.querySelector('.body');
+const order = body.querySelector('.order');
+const ordeButtons = order.querySelectorAll('.order__item-button');
+const orderContents = order.querySelectorAll('.order__content-item');
 const upButton = body.querySelector('.up-button');
 const headerLinkLogo = body.querySelector('.header__link-logo');
 const footerLinkLogo = body.querySelector('.footer__link-logo');
@@ -17,14 +22,14 @@ const onError = (evt) => {
 
 window.onscroll = () => {
   if (window.pageYOffset > 300) {
-    upButton.classList.add('show')
+    upButton.classList.add('show');
   } else {
-    upButton.classList.remove('show')
+    upButton.classList.remove('show');
   }
 };
 
 upButton.onclick = () => {
-  window.scrollTo(0, 0)
+  window.scrollTo(0, 0);
 };
 
 const map = L.map('map')
@@ -58,10 +63,22 @@ const mainPinMarker = L.marker(
 
 mainPinMarker.addTo(map);
 
-mainPinMarker.on('moveend', (evt) => {
-  console.log(evt.target.getLatLng());
-});
+const switchSlides = (switchers, slides) => {
+  for (let i = 0; i < switchers.length; i++) {
+    switchers[i].addEventListener('click', () => {
 
+      for (let i = 0; i < switchers.length; i++) {
+        switchers[i].classList.remove('active');
+        slides[i].classList.remove('active');
+      }
+
+      switchers[i].classList.add('active');
+      slides[i].classList.add('active');
+    });
+  }
+};
+
+switchSlides(ordeButtons, orderContents);
 
 headerLinkLogo.addEventListener('click', onError);
 footerLinkLogo.addEventListener('click', onError);

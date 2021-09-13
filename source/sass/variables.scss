@@ -14,6 +14,7 @@ $desktop-width: 1240px;
   --yellow: #fac663;
   --special-yellow: #fdc305;
   --special-blue: #32a6f3;
+  --blue: #ececee;
   --special-green: #6ecf7b;
   --special-purple: #6f5cda;
   --soft-gray: #e5e5e5;
@@ -34,6 +35,7 @@ $border-white: 1px solid var(--white);
 $border-pink: 2px solid var(--pink);
 $border-yellow: 3px solid var(--yellow);
 $border-green: 3px solid var(--special-green);
+$border-blue: 2px solid var(--blue);
 
 $fond-ubuntu: "Ubuntu", "Arial", sans-serif;
 $fond-adigiana: "Adigiana-extreme", "Arial", sans-serif;
