@@ -1,10 +1,14 @@
 .skills {
   position: relative;
   padding-bottom: 25px;
-  text-align: center;
+  text-align: left;
   border-bottom: $border-languid-gray;
 
   @media (min-width: $desktop-width) {
+    p {
+      column-count: 2;
+    }
+
     &::before {
       position: absolute;
       content: "";

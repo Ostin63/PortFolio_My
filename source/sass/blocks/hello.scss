@@ -2,6 +2,10 @@
   padding-bottom: 25px;
   text-align: center;
   border-bottom: $border-languid-gray;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+  }
 }
 
 .hello__contacts {
