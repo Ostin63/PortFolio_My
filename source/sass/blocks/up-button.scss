@@ -1,24 +1,24 @@
 .up-button {
-  position: fixed;
-  padding: 0;
-  bottom: 75px;
-  right: 50px;
-  width: 54px;
-  height: 54px;
-  border: $border-green;
-  border-radius: 50%;
-  background-color: var(--white-00);
-  cursor: pointer;
-  z-index: 1000;
   display: none;
 
-  &:hover {
-    opacity: 0.5;
-  }
-
   @media (min-width: $tablet-width) {
+    position: fixed;
     width: 64px;
     height: 64px;
+    padding: 0;
+    bottom: 75px;
+    right: 50px;
+    display: block;
+    border: $border-green;
+    border-radius: 50%;
+    background-color: var(--white-00);
+    cursor: pointer;
+    z-index: 1000;
+    display: none;
+
+    &:hover {
+      opacity: 0.5;
+    }
   }
 }
 

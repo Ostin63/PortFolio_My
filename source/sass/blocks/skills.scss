@@ -5,10 +5,6 @@
   border-bottom: $border-languid-gray;
 
   @media (min-width: $desktop-width) {
-    p {
-      column-count: 2;
-    }
-
     &::before {
       position: absolute;
       content: "";
@@ -34,6 +30,12 @@
       z-index: -1;
       opacity: 0.2;
     }
+  }
+}
+
+.skills__text {
+  @media (min-width: $desktop-width) {
+    column-count: 2;
   }
 }
 
