@@ -53,7 +53,7 @@
     grid-template-rows: repeat(5, 1fr);
     grid-template-areas:
       "html . . gulp . . bst . bem"
-      ". sass . . php . oc oc ."
+      ". sass . . php . . oc oc"
       ". . less . . jq . fig ."
       "grid . . css . git git . js"
       ". .ah ah ah ah flex flex .";
