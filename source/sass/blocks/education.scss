@@ -49,17 +49,19 @@
 
   @media (min-width: $tablet-width) {
     width: 298px;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 540px;
+    margin-left: 35px;
+    margin-right: 35px;
   }
 }
 
 .education__academy-img {
   max-width: 640px;
+  margin: 0 auto;
   box-shadow: var(--shadow-90);
 }
 
@@ -93,6 +95,7 @@
 }
 
 @media (min-width: $tablet-width) {
+
   .education__vatuga,
   .education__academy-one {
     border: $border-languid-gray;
@@ -101,7 +104,8 @@
   .education__academy {
     margin-top: 40px;
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
   }
 
@@ -111,9 +115,9 @@
   }
 }
 
-@media (min-width: $desktop-width) {
-  .education__academy-img {
-    width: 540px;
-    display: block;
-  }
-}
+// @media (min-width: $desktop-width) {
+//   .education__academy-img {
+//     width: 540px;
+//     display: block;
+//   }
+// }
