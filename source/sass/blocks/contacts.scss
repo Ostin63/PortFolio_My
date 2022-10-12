@@ -19,6 +19,7 @@
     top: 5px;
     left: 0;
     background: url("../img/stack.svg#email") 50% 50% no-repeat;
+    background-size: cover;
   }
 }
 
@@ -58,23 +59,26 @@
   width: 25px;
   height: 25px;
   display: block;
-  background-size: cover;
   fill: var(--pink);
 
   &--whatsapp {
     background: url("../img/stack.svg#whatsapp") 50% 50% no-repeat;
+    background-size: cover;
   }
 
   &--telegram {
     background: url("../img/stack.svg#telegram") 50% 50% no-repeat;
+    background-size: cover;
   }
 
   &--github {
     background: url("../img/stack.svg#github-icon") 50% 50% no-repeat;
+    background-size: cover;
   }
 
   &--skype {
     background: url("../img/stack.svg#skype") 50% 50% no-repeat;
+    background-size: cover;
   }
 
   &:hover {
